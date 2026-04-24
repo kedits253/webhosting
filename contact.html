@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Support | The Golden Triangle SL</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#fdfbf7',
+                        teal: { 900: '#0f3d3e', 800: '#145c5d' },
+                        gold: { DEFAULT: '#cba052', light: '#dfbb78', dark: '#b08a44' }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans antialiased text-gray-800 bg-cream">
+    <!-- Google Translate Widget -->
+    <div id="google_translate_element" class="absolute top-24 left-4 z-[60] bg-white shadow-md p-2 rounded-sm border border-gray-100"></div>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+      }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="font-serif text-2xl font-bold text-teal-900 tracking-wider">
+                        <span class="text-gold">G</span>OLDEN <span class="text-gold">T</span>RIANGLE
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <!-- Dark Mode Toggle Button -->
+                    <button id="dark-mode-toggle" class="text-gray-600 hover:text-gold dark:text-gray-300 dark:hover:text-gold focus:outline-none transition-colors">
+                        <i class="fas fa-moon text-xl" id="moon-icon"></i>
+                        <i class="fas fa-sun text-xl hidden text-gold" id="sun-icon"></i>
+                    </button>
+                    <a href="index.html" class="text-gray-600 hover:text-teal-900 transition-colors font-medium">Home</a>
+                    <a href="heritage.html" class="text-gray-600 hover:text-teal-900 transition-colors font-medium">Heritage</a>
+                    <a href="travel-guide.html" class="text-gray-600 hover:text-teal-900 transition-colors font-medium">Guide</a>
+                    <a href="gallery.html" class="text-gray-600 hover:text-teal-900 transition-colors font-medium">Gallery</a>
+                    <a href="contact.html" class="px-5 py-2.5 bg-teal-900 text-white hover:bg-teal-800 transition-colors rounded-sm font-medium border-b-2 border-transparent">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-teal-900 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-2 text-center">
+                <a href="index.html" class="block px-3 py-3 text-gray-600 font-medium">Home</a>
+                <a href="heritage.html" class="block px-3 py-3 text-gray-600 font-medium">Heritage</a>
+                <a href="travel-guide.html" class="block px-3 py-3 text-gray-600 font-medium">Guide</a>
+                <a href="gallery.html" class="block px-3 py-3 text-gray-600 font-medium">Gallery</a>
+                <a href="contact.html" class="block px-3 py-3 bg-teal-900 text-white font-bold mt-2">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="pt-32 pb-16 bg-teal-900 text-white text-center px-4">
+        <h1 class="font-serif text-5xl md:text-6xl mb-4">Get in Touch</h1>
+        <p class="text-gray-300 max-w-2xl mx-auto text-lg font-light">We are here to help you plan your perfect journey.</p>
+    </header>
+
+    <main class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col lg:flex-row gap-12">
+            
+            <!-- Contact Form -->
+            <div class="w-full lg:w-2/3 bg-white p-8 md:p-12 shadow-xl rounded-sm fade-in">
+                <h2 class="font-serif text-3xl text-teal-900 mb-6">Send us a Message</h2>
+                <form id="contact-form" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+                            <input type="text" id="name" required class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-teal-900 focus:border-transparent transition-shadow">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                            <input type="email" id="email" required class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-teal-900 focus:border-transparent transition-shadow">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
+                        <select id="subject" class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-teal-900 focus:border-transparent transition-shadow bg-white">
+                            <option>General Inquiry</option>
+                            <option>Tour Information</option>
+                            <option>Feedback</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                        <textarea id="message" rows="5" required class="w-full px-4 py-3 border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-teal-900 focus:border-transparent transition-shadow"></textarea>
+                    </div>
+                    <button type="submit" class="w-full md:w-auto px-8 py-4 bg-gold text-white font-medium hover:bg-gold-dark transition-colors duration-300 rounded-sm">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+
+            <!-- Emergency Sidebar -->
+            <div class="w-full lg:w-1/3 space-y-8 fade-in delay-100">
+                
+                <div class="bg-[#ba1a1a] text-white p-8 rounded-sm shadow-xl relative overflow-hidden">
+                    <div class="absolute -right-6 -top-6 text-white/10">
+                        <i class="fas fa-exclamation-triangle text-9xl"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold mb-6 relative z-10 border-b border-white/20 pb-4">Emergency Help</h3>
+                    
+                    <div class="space-y-6 relative z-10">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-white text-[#ba1a1a] rounded-full flex items-center justify-center text-xl font-bold mr-4 shadow-lg">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div>
+                                <p class="text-white/80 text-sm font-medium uppercase tracking-wider">Tourist Police</p>
+                                <p class="text-3xl font-bold tracking-widest">1912</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-white text-[#ba1a1a] rounded-full flex items-center justify-center text-xl font-bold mr-4 shadow-lg">
+                                <i class="fas fa-ambulance"></i>
+                            </div>
+                            <div>
+                                <p class="text-white/80 text-sm font-medium uppercase tracking-wider">Suwa Seriya (Ambulance)</p>
+                                <p class="text-3xl font-bold tracking-widest">1990</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-white text-[#ba1a1a] rounded-full flex items-center justify-center text-xl font-bold mr-4 shadow-lg">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <p class="text-white/80 text-sm font-medium uppercase tracking-wider">Police Emergency</p>
+                                <p class="text-3xl font-bold tracking-widest">119</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-teal-900 text-white p-8 rounded-sm shadow-xl">
+                    <h3 class="font-serif text-xl text-gold mb-4 border-b border-teal-800 pb-2">Tourism Bureau</h3>
+                    <p class="text-gray-300 text-sm mb-4 leading-relaxed">For official tourism information, visit the Sri Lanka Tourism Development Authority.</p>
+                    <div class="flex items-start text-sm text-gray-300 mb-2">
+                        <i class="fas fa-map-marker-alt mt-1 mr-3 text-gold"></i>
+                        <span>No. 80 Galle Road,<br>Colombo 03,<br>Sri Lanka.</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-teal-900 text-white py-8 text-center mt-8">
+        <p class="text-gray-400 text-sm">&copy; 2026 The Golden Triangle SL. All rights reserved.</p>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/94770000000" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-[100] bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-2xl hover:bg-green-600 hover:scale-110 transition-all duration-300 animate-bounce">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 800, once: true });</script>
+    <script src="main.js"></script>
+</body>
+</html>
