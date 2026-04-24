@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Golden Triangle SL | Explore Sri Lanka's Heritage</title>
+    <meta name="description" content="Discover the historical heritage of Sri Lanka's Golden Triangle. Explore Sigiriya, Anuradhapura, and Polonnaruwa.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#fdfbf7',
+                        teal: {
+                            900: '#0f3d3e',
+                            800: '#145c5d'
+                        },
+                        gold: {
+                            DEFAULT: '#cba052',
+                            light: '#dfbb78',
+                            dark: '#b08a44'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans antialiased text-gray-800 bg-cream">
+    <!-- Google Translate Widget -->
+    <div id="google_translate_element" class="absolute top-24 left-4 z-[60] bg-white shadow-md p-2 rounded-sm border border-gray-100"></div>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+      }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="font-serif text-2xl font-bold text-teal-900 tracking-wider">
+                        <span class="text-gold">G</span>OLDEN <span class="text-gold">T</span>RIANGLE
+                    </a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <!-- Dark Mode Toggle Button -->
+                    <button id="dark-mode-toggle" class="text-gray-600 hover:text-gold dark:text-gray-300 dark:hover:text-gold focus:outline-none transition-colors">
+                        <i class="fas fa-moon text-xl" id="moon-icon"></i>
+                        <i class="fas fa-sun text-xl hidden text-gold" id="sun-icon"></i>
+                    </button>
+                    <a href="index.html" class="text-gold font-medium border-b-2 border-gold pb-1">Home</a>
+                    <a href="heritage.html" class="text-gray-600 hover:text-teal-900 transition-colors font-medium">Heritage</a>
+                    <a href="travel-guide.html" class="text-gray-600 hover:text-teal-900 transition-colors font-medium">Guide</a>
+                    <a href="gallery.html" class="text-gray-600 hover:text-teal-900 transition-colors font-medium">Gallery</a>
+                    <a href="contact.html" class="px-5 py-2.5 bg-teal-900 text-white hover:bg-teal-800 transition-colors rounded-sm font-medium">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-teal-900 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-2 text-center">
+                <a href="index.html" class="block px-3 py-3 text-gold font-medium bg-gray-50">Home</a>
+                <a href="heritage.html" class="block px-3 py-3 text-gray-600 hover:bg-gray-50 hover:text-teal-900 transition-colors font-medium">Heritage</a>
+                <a href="travel-guide.html" class="block px-3 py-3 text-gray-600 hover:bg-gray-50 hover:text-teal-900 transition-colors font-medium">Guide</a>
+                <a href="gallery.html" class="block px-3 py-3 text-gray-600 hover:bg-gray-50 hover:text-teal-900 transition-colors font-medium">Gallery</a>
+                <a href="contact.html" class="block px-3 py-3 text-teal-900 font-bold mt-2">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 w-full h-full">
+            <img src="images/sigiriya.png" alt="Sigiriya Rock Fortress" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70"></div>
+        </div>
+        
+        <!-- Weather Widget (Glassmorphism) -->
+        <div class="absolute top-28 right-4 md:right-8 bg-white/20 backdrop-blur-md border border-white/30 p-4 rounded-xl shadow-lg text-white flex items-center space-x-4 z-20" data-aos="fade-left">
+            <div class="text-4xl text-yellow-400 drop-shadow-md">
+                <i class="fas fa-sun"></i>
+            </div>
+            <div>
+                <p class="text-xs uppercase tracking-widest opacity-90 font-medium">Sigiriya</p>
+                <p class="text-2xl font-bold drop-shadow-sm">31°C</p>
+                <p class="text-sm opacity-90">Sunny</p>
+            </div>
+        </div>
+
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-16 fade-in">
+            <span class="block text-gold font-medium tracking-[0.3em] uppercase mb-4 text-sm md:text-base">Welcome to Sri Lanka</span>
+            <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl text-white font-bold mb-6 leading-tight">
+                Journey Into <br/> <span class="italic font-light text-cream">Antiquity</span>
+            </h1>
+            <p class="text-gray-200 text-lg md:text-xl mb-10 max-w-2xl mx-auto font-light leading-relaxed">
+                Discover the majestic ruins, sacred cities, and breathtaking landscapes of the Golden Triangle.
+            </p>
+            <a href="heritage.html" class="inline-flex items-center px-8 py-4 bg-gold text-white hover:bg-gold-dark transition-all duration-300 rounded-sm font-medium tracking-wide group">
+                Explore Now
+                <i class="fas fa-arrow-right ml-3 group-hover:translate-x-1 transition-transform"></i>
+            </a>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#why-visit" class="text-white/70 hover:text-white">
+                <i class="fas fa-chevron-down text-2xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Why Visit Section -->
+    <section id="why-visit" class="py-24 bg-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="font-serif text-4xl md:text-5xl text-teal-900 mb-4">Why Visit the Triangle?</h2>
+                <div class="w-24 h-1 bg-gold mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <!-- Feature 1 -->
+                <div class="text-center fade-in delay-100">
+                    <div class="w-20 h-20 mx-auto bg-teal-900 rounded-full flex items-center justify-center mb-6 shadow-xl">
+                        <i class="fas fa-monument text-3xl text-gold"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl text-teal-900 mb-3">Ancient History</h3>
+                    <p class="text-gray-600 leading-relaxed">Walk through cities that thrived millennia ago. Experience architectural marvels that rival the world's greatest ancient civilizations.</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="text-center fade-in delay-200">
+                    <div class="w-20 h-20 mx-auto bg-teal-900 rounded-full flex items-center justify-center mb-6 shadow-xl">
+                        <i class="fas fa-om text-3xl text-gold"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl text-teal-900 mb-3">Spiritual Heritage</h3>
+                    <p class="text-gray-600 leading-relaxed">Find peace among colossal Buddha statues and ancient stupas. A profound journey into the spiritual heart of Buddhism.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="text-center fade-in delay-300">
+                    <div class="w-20 h-20 mx-auto bg-teal-900 rounded-full flex items-center justify-center mb-6 shadow-xl">
+                        <i class="fas fa-leaf text-3xl text-gold"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl text-teal-900 mb-3">Pristine Nature</h3>
+                    <p class="text-gray-600 leading-relaxed">The ruins are enveloped by lush jungles and vast reservoirs, offering sanctuary to majestic elephants and exotic wildlife.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cultural Experiences -->
+    <section class="py-24 bg-white border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row gap-12 items-center">
+                <div class="w-full md:w-1/2 fade-in">
+                    <span class="text-gold tracking-widest uppercase text-sm font-semibold mb-2 block">Beyond the Ruins</span>
+                    <h2 class="font-serif text-4xl md:text-5xl text-teal-900 mb-6">Immersive Cultural Experiences</h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">The Golden Triangle is not just about ancient stones; it is a living, breathing testament to a culture that has thrived for millennia. Engage your senses with experiences that connect you to the heart of Sri Lanka.</p>
+                    
+                    <div class="space-y-6 mt-8">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 rounded-full bg-cream flex items-center justify-center text-gold text-xl flex-shrink-0 mt-1 shadow-sm border border-gray-100">
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-serif text-xl text-teal-900 mb-1">Culinary Journeys</h4>
+                                <p class="text-gray-500 text-sm leading-relaxed">Learn to cook traditional rice and curry in clay pots over an open wood fire in a local village home.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 rounded-full bg-cream flex items-center justify-center text-gold text-xl flex-shrink-0 mt-1 shadow-sm border border-gray-100">
+                                <i class="fas fa-spa"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-serif text-xl text-teal-900 mb-1">Ayurvedic Healing</h4>
+                                <p class="text-gray-500 text-sm leading-relaxed">Rejuvenate your body and mind with ancient Ayurvedic therapies using natural herbs and oils native to the island.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 rounded-full bg-cream flex items-center justify-center text-gold text-xl flex-shrink-0 mt-1 shadow-sm border border-gray-100">
+                                <i class="fas fa-gem"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-serif text-xl text-teal-900 mb-1">Traditional Crafts</h4>
+                                <p class="text-gray-500 text-sm leading-relaxed">Witness master craftsmen creating intricate wood carvings, brassware, and traditional masks just as their ancestors did.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 fade-in delay-100">
+                    <div class="relative rounded-sm overflow-hidden shadow-2xl h-[600px]">
+                        <img src="images/tea.png" alt="Cultural Experience" class="w-full h-full object-cover" />
+                        <div class="absolute inset-0 bg-teal-900/10"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destinations Preview -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-end mb-12 fade-in">
+                <div>
+                    <h2 class="font-serif text-4xl md:text-5xl text-teal-900 mb-4">Discover More</h2>
+                    <div class="w-24 h-1 bg-gold"></div>
+                </div>
+                <a href="heritage.html" class="hidden md:inline-flex text-teal-900 hover:text-gold font-medium transition-colors items-center">
+                    View all destinations <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <a href="heritage.html" class="group relative h-96 overflow-hidden rounded-sm shadow-lg fade-in">
+                    <img src="images/polonnaruwa.png" alt="Polonnaruwa" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <span class="text-gold text-sm tracking-widest uppercase mb-2 block">The Big Three</span>
+                        <h3 class="font-serif text-3xl text-white mb-2">Heritage Sites</h3>
+                        <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">Explore Sigiriya, Anuradhapura, and Polonnaruwa.</p>
+                    </div>
+                </a>
+
+                <!-- Card 2 -->
+                <a href="travel-guide.html" class="group relative h-96 overflow-hidden rounded-sm shadow-lg fade-in delay-100">
+                    <img src="images/elephant.png" alt="Elephant Safari" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <span class="text-gold text-sm tracking-widest uppercase mb-2 block">Practical Info</span>
+                        <h3 class="font-serif text-3xl text-white mb-2">Travel Guide</h3>
+                        <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">Best time to visit, what to pack, and cultural etiquette.</p>
+                    </div>
+                </a>
+
+                <!-- Card 3 -->
+                <a href="gallery.html" class="group relative h-96 overflow-hidden rounded-sm shadow-lg fade-in delay-200">
+                    <img src="images/anuradhapura.png" alt="Anuradhapura Stupa" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <span class="text-gold text-sm tracking-widest uppercase mb-2 block">Visual Journey</span>
+                        <h3 class="font-serif text-3xl text-white mb-2">Gallery</h3>
+                        <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">A curated collection of stunning imagery.</p>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="mt-8 text-center md:hidden">
+                <a href="heritage.html" class="inline-flex text-teal-900 hover:text-gold font-medium transition-colors items-center">
+                    View all destinations <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-24 bg-teal-900 text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 -mt-20 -mr-20 text-white/5">
+            <i class="fas fa-quote-right text-[20rem]"></i>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="font-serif text-4xl md:text-5xl text-white mb-4">Traveler Stories</h2>
+                <div class="w-24 h-1 bg-gold mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-teal-800/50 p-8 rounded-sm backdrop-blur-sm border border-teal-700/50" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-gold mb-4 text-sm">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="font-serif text-lg italic mb-6 leading-relaxed">"Climbing Sigiriya at sunrise was a spiritual experience. The sheer scale of the ancient engineering left me completely speechless."</p>
+                    <div class="flex items-center">
+                        <img src="https://ui-avatars.com/api/?name=Elena+Martinez&background=cba052&color=fff&rounded=true" alt="Traveler" class="w-12 h-12 rounded-full border-2 border-gold shadow-md">
+                        <div class="ml-4">
+                            <h4 class="font-bold text-sm tracking-wide">Elena Martinez</h4>
+                            <p class="text-teal-200 text-xs uppercase tracking-wider">Spain</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="bg-teal-800/50 p-8 rounded-sm backdrop-blur-sm border border-teal-700/50" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-gold mb-4 text-sm">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="font-serif text-lg italic mb-6 leading-relaxed">"Polonnaruwa by bicycle is an absolute must! The Gal Vihara statues are breathtaking in person. A journey I will never forget."</p>
+                    <div class="flex items-center">
+                        <img src="https://ui-avatars.com/api/?name=James+Smith&background=cba052&color=fff&rounded=true" alt="Traveler" class="w-12 h-12 rounded-full border-2 border-gold shadow-md">
+                        <div class="ml-4">
+                            <h4 class="font-bold text-sm tracking-wide">James & Diana</h4>
+                            <p class="text-teal-200 text-xs uppercase tracking-wider">United Kingdom</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-teal-800/50 p-8 rounded-sm backdrop-blur-sm border border-teal-700/50" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-gold mb-4 text-sm">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="font-serif text-lg italic mb-6 leading-relaxed">"The cultural triangle is the soul of Sri Lanka. Standing beneath the Ruwanwelisaya stupa in Anuradhapura brought tears to my eyes."</p>
+                    <div class="flex items-center">
+                        <img src="https://ui-avatars.com/api/?name=Akira+Sato&background=cba052&color=fff&rounded=true" alt="Traveler" class="w-12 h-12 rounded-full border-2 border-gold shadow-md">
+                        <div class="ml-4">
+                            <h4 class="font-bold text-sm tracking-wide">Akira Sato</h4>
+                            <p class="text-teal-200 text-xs uppercase tracking-wider">Japan</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-teal-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-2">
+                    <a href="index.html" class="font-serif text-2xl font-bold text-white tracking-wider mb-6 block">
+                        <span class="text-gold">G</span>OLDEN <span class="text-gold">T</span>RIANGLE
+                    </a>
+                    <p class="text-gray-400 max-w-sm mb-6 leading-relaxed">
+                        Your premium guide to discovering the historical and cultural heart of Sri Lanka.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-teal-800 flex items-center justify-center hover:bg-gold transition-colors"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-teal-800 flex items-center justify-center hover:bg-gold transition-colors"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-teal-800 flex items-center justify-center hover:bg-gold transition-colors"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-serif text-xl mb-6 text-gold">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="heritage.html" class="text-gray-400 hover:text-white transition-colors">Heritage Sites</a></li>
+                        <li><a href="travel-guide.html" class="text-gray-400 hover:text-white transition-colors">Travel Guide</a></li>
+                        <li><a href="gallery.html" class="text-gray-400 hover:text-white transition-colors">Gallery</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-serif text-xl mb-6 text-gold">Support</h4>
+                    <ul class="space-y-3">
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact Us</a></li>
+                        <li><span class="text-gray-400">Tourist Police: </span><span class="text-white font-medium">1912</span></li>
+                        <li><span class="text-gray-400">Ambulance: </span><span class="text-white font-medium">1990</span></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-teal-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm mb-4 md:mb-0">
+                    &copy; 2026 The Golden Triangle SL. All rights reserved.
+                </p>
+                <div class="flex space-x-6 text-sm text-gray-500">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/94770000000" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-[100] bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-2xl hover:bg-green-600 hover:scale-110 transition-all duration-300 animate-bounce">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 800, once: true });</script>
+    <script src="main.js"></script>
+</body>
+</html>

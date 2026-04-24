@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heritage Sites | The Golden Triangle SL</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#fdfbf7',
+                        teal: { 900: '#0f3d3e', 800: '#145c5d' },
+                        gold: { DEFAULT: '#cba052', light: '#dfbb78', dark: '#b08a44' }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans antialiased text-gray-800 bg-cream">
+    <!-- Google Translate Widget -->
+    <div id="google_translate_element" class="absolute top-24 left-4 z-[60] bg-white shadow-md p-2 rounded-sm border border-gray-100"></div>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+      }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <!-- Navigation (Simplified for brevity, same structure) -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="font-serif text-2xl font-bold text-teal-900 tracking-wider">
+                        <span class="text-gold">G</span>OLDEN <span class="text-gold">T</span>RIANGLE
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <!-- Dark Mode Toggle Button -->
+                    <button id="dark-mode-toggle" class="text-gray-600 hover:text-gold dark:text-gray-300 dark:hover:text-gold focus:outline-none transition-colors">
+                        <i class="fas fa-moon text-xl" id="moon-icon"></i>
+                        <i class="fas fa-sun text-xl hidden text-gold" id="sun-icon"></i>
+                    </button>
+                    <a href="index.html" class="text-gray-600 hover:text-teal-900 transition-colors font-medium">Home</a>
+                    <a href="heritage.html" class="text-gold font-medium border-b-2 border-gold pb-1">Heritage</a>
+                    <a href="travel-guide.html" class="text-gray-600 hover:text-teal-900 transition-colors font-medium">Guide</a>
+                    <a href="gallery.html" class="text-gray-600 hover:text-teal-900 transition-colors font-medium">Gallery</a>
+                    <a href="contact.html" class="px-5 py-2.5 bg-teal-900 text-white hover:bg-teal-800 transition-colors rounded-sm font-medium">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-teal-900 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-2 text-center">
+                <a href="index.html" class="block px-3 py-3 text-gray-600 font-medium">Home</a>
+                <a href="heritage.html" class="block px-3 py-3 text-gold bg-gray-50 font-medium">Heritage</a>
+                <a href="travel-guide.html" class="block px-3 py-3 text-gray-600 font-medium">Guide</a>
+                <a href="gallery.html" class="block px-3 py-3 text-gray-600 font-medium">Gallery</a>
+                <a href="contact.html" class="block px-3 py-3 text-teal-900 font-bold mt-2">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="pt-32 pb-16 bg-teal-900 text-white text-center px-4">
+        <h1 class="font-serif text-5xl md:text-6xl mb-4">The Big Three</h1>
+        <p class="text-gray-300 max-w-2xl mx-auto text-lg font-light">Explore the UNESCO World Heritage sites that form the heart of Sri Lanka's cultural triangle.</p>
+    </header>
+
+    <!-- Interactive Route Section -->
+    <section class="py-16 bg-cream border-y border-gray-200" data-aos="fade-up">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="font-serif text-3xl md:text-4xl text-teal-900 mb-16">The Golden Route</h2>
+            <div class="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-8 relative">
+                <div class="hidden md:block absolute top-1/2 left-[15%] right-[15%] h-1 bg-gold/30 -z-10 transform -translate-y-1/2"></div>
+                <div class="bg-white p-6 rounded-full shadow-lg border-4 border-teal-900 w-48 h-48 flex flex-col items-center justify-center transform hover:-translate-y-2 transition-transform duration-300">
+                    <i class="fas fa-stupa text-4xl text-gold mb-2"></i>
+                    <h3 class="font-bold text-teal-900">Anuradhapura</h3>
+                    <p class="text-xs text-gray-500 mt-1 uppercase tracking-wider">Start Point</p>
+                </div>
+                <div class="text-gold text-2xl md:text-3xl rotate-90 md:rotate-0"><i class="fas fa-chevron-right"></i></div>
+                <div class="bg-white p-6 rounded-full shadow-lg border-4 border-teal-900 w-48 h-48 flex flex-col items-center justify-center transform hover:-translate-y-2 transition-transform duration-300">
+                    <i class="fas fa-vihara text-4xl text-gold mb-2"></i>
+                    <h3 class="font-bold text-teal-900">Polonnaruwa</h3>
+                    <p class="text-xs text-gray-500 mt-1 font-bold">104 km</p>
+                </div>
+                <div class="text-gold text-2xl md:text-3xl rotate-90 md:rotate-0"><i class="fas fa-chevron-right"></i></div>
+                <div class="bg-white p-6 rounded-full shadow-lg border-4 border-teal-900 w-48 h-48 flex flex-col items-center justify-center transform hover:-translate-y-2 transition-transform duration-300">
+                    <i class="fas fa-mountain text-4xl text-gold mb-2"></i>
+                    <h3 class="font-bold text-teal-900">Sigiriya</h3>
+                    <p class="text-xs text-gray-500 mt-1 font-bold">55 km</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Sections -->
+    <main class="py-16">
+
+        <!-- Historical Timeline -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24 fade-in">
+            <div class="text-center mb-12">
+                <h2 class="font-serif text-3xl md:text-4xl text-teal-900 mb-4">A Journey Through Time</h2>
+                <div class="w-24 h-1 bg-gold mx-auto"></div>
+            </div>
+            <div class="relative border-l-2 border-gold/30 ml-4 md:ml-auto md:mr-auto md:w-full md:flex md:justify-between md:border-l-0 md:border-t-2 md:pt-8 md:mt-12">
+                <div class="mb-8 pl-8 relative md:pl-0 md:w-1/3 md:text-center">
+                    <div class="absolute -left-[9px] top-1 md:-top-[41px] md:left-1/2 md:-ml-[9px] w-4 h-4 rounded-full bg-gold shadow-md"></div>
+                    <span class="text-gold font-bold text-xl block mb-2">3rd Century BC</span>
+                    <h3 class="font-serif text-xl text-teal-900 mb-2">Rise of Anuradhapura</h3>
+                    <p class="text-gray-600 text-sm">Buddhism is introduced to Sri Lanka. Anuradhapura becomes the first grand capital, flourishing with monumental dagobas.</p>
+                </div>
+                <div class="mb-8 pl-8 relative md:pl-0 md:w-1/3 md:text-center">
+                    <div class="absolute -left-[9px] top-1 md:-top-[41px] md:left-1/2 md:-ml-[9px] w-4 h-4 rounded-full bg-gold shadow-md"></div>
+                    <span class="text-gold font-bold text-xl block mb-2">477 AD</span>
+                    <h3 class="font-serif text-xl text-teal-900 mb-2">The Sky Citadel</h3>
+                    <p class="text-gray-600 text-sm">King Kasyapa builds his magnificent palace on top of the Sigiriya rock, creating an architectural marvel.</p>
+                </div>
+                <div class="mb-0 pl-8 relative md:pl-0 md:w-1/3 md:text-center">
+                    <div class="absolute -left-[9px] top-1 md:-top-[41px] md:left-1/2 md:-ml-[9px] w-4 h-4 rounded-full bg-gold shadow-md"></div>
+                    <span class="text-gold font-bold text-xl block mb-2">11th Century AD</span>
+                    <h3 class="font-serif text-xl text-teal-900 mb-2">Golden Age of Polonnaruwa</h3>
+                    <p class="text-gray-600 text-sm">Following the decline of Anuradhapura, Polonnaruwa becomes the capital, famed for its massive irrigation systems and stone carvings.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Sigiriya (Image Left, Text Right) -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="w-full lg:w-1/2 fade-in">
+                    <div class="relative overflow-hidden rounded-sm shadow-2xl">
+                        <img src="images/sigiriya.png" alt="Sigiriya" class="w-full h-[500px] object-cover hover:scale-105 transition-transform duration-700" />
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 fade-in delay-100">
+                    <span class="text-gold tracking-widest uppercase text-sm font-semibold mb-2 block">8th Wonder of the World</span>
+                    <h2 class="font-serif text-4xl text-teal-900 mb-6">Sigiriya Rock Fortress</h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Rising dramatically from the central plains, the enigmatic rocky outcrop of Sigiriya is perhaps Sri Lanka's single most dramatic sight. Near-vertical walls soar to a flat-topped summit that contains the ruins of an ancient civilization.
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        Built by King Kasyapa in the 5th century AD, the fortress features advanced hydraulic systems, the famous 'Mirror Wall', and exquisite frescoes of celestial maidens.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 border-t border-gray-200 pt-6">
+                        <div>
+                            <span class="block text-teal-900 font-bold"><i class="far fa-clock text-gold mr-2"></i> Best Time</span>
+                            <span class="text-gray-500 text-sm">Early morning (7 AM)</span>
+                        </div>
+                        <div>
+                            <span class="block text-teal-900 font-bold"><i class="fas fa-shoe-prints text-gold mr-2"></i> Difficulty</span>
+                            <span class="text-gray-500 text-sm">Moderate (1,200 steps)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Anuradhapura (Image Right, Text Left) -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 bg-white">
+            <div class="flex flex-col lg:flex-row-reverse items-center gap-12">
+                <div class="w-full lg:w-1/2 fade-in">
+                    <div class="relative overflow-hidden rounded-sm shadow-2xl">
+                        <img src="images/anuradhapura.png" alt="Anuradhapura" class="w-full h-[500px] object-cover hover:scale-105 transition-transform duration-700" />
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 fade-in delay-100">
+                    <span class="text-gold tracking-widest uppercase text-sm font-semibold mb-2 block">The First Capital</span>
+                    <h2 class="font-serif text-4xl text-teal-900 mb-6">Anuradhapura</h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        The spiritual and historical heart of Sri Lanka. Anuradhapura was the center of Theravada Buddhism for many centuries. Today, its sprawling complex contains a rich collection of archaeological and architectural wonders.
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        Home to the sacred Sri Maha Bodhi tree—grown from a cutting of the tree under which the Buddha attained enlightenment—and massive bell-shaped stupas (dagobas) built of small sun-dried bricks.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 border-t border-gray-200 pt-6">
+                        <div>
+                            <span class="block text-teal-900 font-bold"><i class="fas fa-tree text-gold mr-2"></i> Highlight</span>
+                            <span class="text-gray-500 text-sm">Jaya Sri Maha Bodhi</span>
+                        </div>
+                        <div>
+                            <span class="block text-teal-900 font-bold"><i class="fas fa-tshirt text-gold mr-2"></i> Dress Code</span>
+                            <span class="text-gray-500 text-sm">Cover shoulders/knees, white preferred</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Polonnaruwa (Image Left, Text Right) -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="w-full lg:w-1/2 fade-in">
+                    <div class="relative overflow-hidden rounded-sm shadow-2xl">
+                        <img src="images/polonnaruwa.png" alt="Polonnaruwa" class="w-full h-[500px] object-cover hover:scale-105 transition-transform duration-700" />
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 fade-in delay-100">
+                    <span class="text-gold tracking-widest uppercase text-sm font-semibold mb-2 block">The Medieval Capital</span>
+                    <h2 class="font-serif text-4xl text-teal-900 mb-6">Polonnaruwa</h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        The second most ancient of Sri Lanka's kingdoms, Polonnaruwa remains one of the best planned archaeological relic cities in the country. The city reached its zenith in the 12th century under King Parakramabahu I.
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        Marvel at the Gal Vihara, a rock temple featuring four colossal statues of the Buddha carved into the face of a large granite boulder, showcasing the pinnacle of Sinhalese rock carving.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 border-t border-gray-200 pt-6">
+                        <div>
+                            <span class="block text-teal-900 font-bold"><i class="fas fa-bicycle text-gold mr-2"></i> How to Explore</span>
+                            <span class="text-gray-500 text-sm">Rent a bicycle for the day</span>
+                        </div>
+                        <div>
+                            <span class="block text-teal-900 font-bold"><i class="fas fa-sun text-gold mr-2"></i> Tip</span>
+                            <span class="text-gray-500 text-sm">Socks are needed for hot stone paths</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (Simplified) -->
+    <footer class="bg-teal-900 text-white py-8 text-center">
+        <p class="text-gray-400 text-sm">&copy; 2026 The Golden Triangle SL. All rights reserved.</p>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/94770000000" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-[100] bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-2xl hover:bg-green-600 hover:scale-110 transition-all duration-300 animate-bounce">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 800, once: true });</script>
+    <script src="main.js"></script>
+</body>
+</html>
